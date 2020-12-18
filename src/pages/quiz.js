@@ -73,7 +73,6 @@ export default function Quiz({ questions }) {
           return (
             <button
               onClick={() => submitAnswer("false")}
-              className="btn btn-dark"
               key={index}
               className="answerbox"
               style={{ order: Math.floor(Math.random() * 10) + index }}
@@ -84,9 +83,9 @@ export default function Quiz({ questions }) {
           );
         })}
         <button
-          className="btn btn-info answerbox"
           onClick={() => submitAnswer("correct")}
           style={{ order: Math.floor(Math.random() * 10) }}
+          className="answerbox"
           disabled={nextQuestion ? true : false}
         >
           {nowDisplayQuestion.correct_answer.replace(/[%20 %27]/g, " ")}
