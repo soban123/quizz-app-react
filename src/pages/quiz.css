@@ -1,0 +1,26 @@
+.question-attempts {
+  height: 50px;
+}
+
+.answer-container {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+}
+.answerbox {
+  border: 1px solid gray;
+  width: 200px;
+  margin: 10px auto;
+}
+.next-question-box {
+  width: 200px;
+  height: 100px;
+  margin: 0px auto;
+}
+.next-quest {
+  height: 158px;
+}
+
+.checked {
+  color: orange;
+}
