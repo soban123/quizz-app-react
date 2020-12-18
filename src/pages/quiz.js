@@ -77,16 +77,17 @@ export default function Quiz({ questions }) {
               key={index}
               className="answerbox"
               style={{ order: Math.floor(Math.random() * 10) + index }}
+              disabled={nextQuestion ? true : false}
             >
               {answer.replace(/[%20 %27]/g, " ")}
             </button>
           );
         })}
         <button
-          className="btn btn-dark"
+          className="btn btn-info answerbox"
           onClick={() => submitAnswer("correct")}
-          className="answerbox"
           style={{ order: Math.floor(Math.random() * 10) }}
+          disabled={nextQuestion ? true : false}
         >
           {nowDisplayQuestion.correct_answer.replace(/[%20 %27]/g, " ")}
         </button>
