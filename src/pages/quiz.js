@@ -50,7 +50,7 @@ export default function Quiz({ questions }) {
   let minScore = (score * 100) / questions.length;
   let currScore = (score * 100) / totalQuestionsAttempted;
   return (
-    <div>
+    <div className="container">
       <Attemptsbar
         totalQuestionsAttempted={totalQuestionsAttempted}
         questions={questions}

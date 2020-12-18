@@ -3,6 +3,14 @@ import React from "react";
 export default function scoreChart({ minScore, currScore, maxScore }) {
   return (
     <div style={{ position: "relative" }}>
+      <div className="d-flex justify-content-between">
+        {" "}
+        <h4 className="ml-auto"> Score : {minScore} % </h4>{" "}
+        <h4 className="ml-auto">
+          {" "}
+          Max Score : {maxScore > 100 ? "100" : maxScore} %{" "}
+        </h4>
+      </div>
       <div
         style={{
           background: "black",
@@ -15,7 +23,6 @@ export default function scoreChart({ minScore, currScore, maxScore }) {
         }}
       >
         {" "}
-        score {minScore} %
       </div>
       <div
         style={{
@@ -27,6 +34,7 @@ export default function scoreChart({ minScore, currScore, maxScore }) {
           opacity: 0.6,
         }}
       ></div>
+
       <div
         style={{
           background: "red",
@@ -38,7 +46,6 @@ export default function scoreChart({ minScore, currScore, maxScore }) {
         }}
       >
         {" "}
-        max score {maxScore > 100 ? "100" : maxScore} %
       </div>
     </div>
   );
